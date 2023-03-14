@@ -19,7 +19,7 @@ while (repetir) {
       break;
   }
 
-  let respuesta = prompt("Desea comprar otra verdura?")
+  let respuesta = prompt("Desea comprar otra verdura? escriba Si o No")
 
   if (respuesta === "no" || respuesta === "No") {
     repetir = false
