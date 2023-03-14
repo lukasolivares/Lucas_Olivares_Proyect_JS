@@ -1,43 +1,54 @@
-//var = Variable
-//let =variable para un archivo
-//cons = constante (no varia)
-//prompt (entrada)
-//alert (salida)
-
-let nombre = prompt ("ingrese nombre")
+let nombre = prompt("ingrese nombre")
 alert("Bienvenido/a " + nombre)
 
-//prompt guarda el continido como caracter
+let repetir = true
 
-//console.log
-//console no se puede mostrar informacion sensible ya que todos pueden verlo.
+while (repetir) {
+  let verdura = prompt("Ingrese la verdura que desea comprar.")
 
-//debug con breakpoint
-
-
-//Condicionales en java escript ----> "estructura IF" --> if... else, | if... else if
-
-//Variables boolean ---> Valores verdadero (true) Volres falsos (false)
-
-//Operadores logicos de comparacion --> AND - NOT - OR ----> Combinaciones
-
-//para asignar se utiliza 1 "=" (igual)
-//para comparar se utiliza 2 "==" (igual) <-- NO TIENE EN CUENTA EL TIPO DE DATO (DA TRUE)
-//para comparar se utiliza 3 "===" (igual) <-- SI TIENE EN CUENTA EL TIPO DE DATO (DA FALSE)
-
-//CONTRASEÑAS SE UTILIZA 3 === 
-
-
-let verdura = prompt ("Ingrese la verdura que desea comprar")
-switch (verdura) {
+  switch (verdura) {
     case "cebolla":
-        alert ("el kilo de cebolla $400")
-        break;
+      alert("el kilo de cebolla $400")
+      break;
     case "papa":
-        alert ("el kilo de cebolla $400")
-        break;
+      alert("el kilo de papa $40")
+      break;
 
     default:
-        alert ("no tenemos la verdura ingresada")
-        break;
+      alert("no tenemos la verdura ingresada")
+      break;
+  }
+
+  let respuesta = prompt("Desea comprar otra verdura?")
+
+  if (respuesta === "no" || respuesta === "No") {
+    repetir = false
+  }
+}
+
+alert("Gracias por su compra " + nombre)
+
+const verduras = [
+  {
+    nombre: "cebolla",
+    precio: 400,
+    oferta: false
+  },
+  {
+    nombre: "papa",
+    precio: 40,
+    oferta: true
+  },
+  {
+    nombre: "zanahoria",
+    precio: 50,
+    oferta: true
+  },
+]
+
+for (let i = 0; i < verduras.length; i++) {
+  let verdura = verduras[i]
+  if (verdura.oferta) {
+    alert("La verdura " + verdura.nombre + " tiene oferta")
+  }
 }
